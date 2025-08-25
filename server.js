@@ -45,7 +45,7 @@ mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     app.listen(PORT, () => console.log(`🚍 Servidor corriendo en puerto ${PORT}`));
 
     cron.schedule("*/1 * * * *", async () => {
-      console.log("⏰ Ejecutando limpieza de reservas...");
+      console.log("⏰ Ejecutando limpieza de reservas...(10min)");
       await cleanupExpiredReservations();
     });
    
