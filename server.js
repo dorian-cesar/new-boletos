@@ -16,6 +16,7 @@ const cityRoutes = require('./routes/cities');
 const tipoServicioRoutes = require('./routes/busServiceTypes');
 const cityRoutes2 = require("./routes/origenRoute");
 const seatRoutes = require("./routes/seatRoutes");
+const servicesRoutes = require("./routes/services");
 
 
 const cleanupExpiredReservations = require("./jobs/cleanupReservations");
@@ -35,6 +36,7 @@ app.use('/api/ciudades', cityRoutes);
 app.use('/api/tipoServicio', tipoServicioRoutes);
 app.use("/api/origenes", cityRoutes2);
 app.use("/api/seat", seatRoutes);
+app.use("/api/services", servicesRoutes);
 
 const PORT = process.env.PORT || 3000;
 const MONGO_URI = process.env.MONGO_URI;
